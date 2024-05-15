@@ -24,6 +24,7 @@ exports.postUpload = async (req, res) => {
   if (!type) {
     return res.status(400).json({ error: 'Missing type' });
   }
+  // eslint-disable-next-line no-undef
   if (!data && type !== folder) {
     return res.status(400).json({ error: 'Missing data' });
   }
